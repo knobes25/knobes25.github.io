@@ -3,39 +3,86 @@
  <head>
   <meta charset="UTF-8">
   <title>Franklin, ID | Weather Site</title>
-  <meta name="Weather Site" content="A site that provides weather info in Franklin ID.">
+  <meta name="description" content="A site that provides weather info in Franklin ID.">
   <meta name="viewport" content="width=device-width">
+     <link rel="stylesheet" type="text/css" href="css/screen.css" media="screen">
  </head>
  <body> 
-     <header><img src="Images/plan-images/logo.jpeg" alt="Logo"><h1>The Weather Site</h1>
+     <header id="page-header"><img src="Images/plan-images/logo.jpeg" alt="Logo">
+         <div id="logo">&#9748;</div>
+         <h1 id="site-brand">The Weather Site</h1>
 </header>
-<nav>
-   <ul>
+<nav id="page-nav">
+    <ul>
     <li><a href="https://knobes25.github.io/" title="Go to home page">Home</a></li>
-   
    <li>Search</li>
     <li>Current</li>
-    <li>Franklin</li>
+    <li><a href="http:///weather/franklin.html" title="Visit the Franklin, ID weather page for current weather conditions" target="_blank">Franklin</a></li>
     <li>Greenville</li>
     <li>Springfield</li>
        </ul>
 </nav>
 <main>
  <h1>Franklin, ID</h1>
+    <section id="locationInfo">
     <p><b>Zip:</b> 83237 | <b>Elevation:</b> 4501 ft. | <b>Location:</b> 42.0135 N, 111.8072 W</p>
-    <h3>Temperature</h3>
-    <p>24 F</p>
-    <p>High:39F Low:21</p>
-    <p> Feels like:39</p>
-    <h3>Wind</h3>
+        </section>
+    <div id="curWeather">
+    <div id="smallScreens">
+        <section id="temp">
+    <h2>Temperature</h2>
+        <p id="curTemp">24&deg;F</p>
+    <p>High:39F Low:21F</p>
+    <p> Feels like:21F</p>
+            </section>
+        <section id="wind">
+    <h2>Wind</h2>
+        <div id="dial" class="nw">
     <p>N<br> 
-    2 mph<br>
-    <b>Direction:</b> NW<br>
-    <b>Gusts:</b> 5mph</p>
+    2 mph</p>
+            </div>
+          <div id="windInfo"> 
+        <ul>
+   <li> <b>Direction:</b> NW</li>
+    <li><b>Gusts:</b> 5mph</li>
+            </ul>
+            </div>
+            </section>
+    </div>
+        <section id="video">
     <h3>Video Forecast</h3>
     <p>Broken Link</p>
+            </section>
+        </div>
+    <section id="hourly">
 <h3>Hourly Forcast</h3>
-    <p>12am:21F |1am:21F |2am:21F |3am:20F |4am:20F |5am:20F |6am:20F |7am:21F |8am:21F | ....</p>
+    <ul>
+ <li>12am: 21°F</li>
+ <li>1am: 21°F</li>
+ <li>2am: 21°F</li>
+ <li>3am: 20°F</li>
+ <li>4am: 20°F</li>
+ <li>5am: 20°F</li>
+ <li>6am: 20°F</li>
+ <li>7am: 21°F</li>
+ <li>8am: 25°F</li>
+ <li>9am: 28°F</li>
+ <li>10am: 30°F</li>
+ <li>11am: 34°F</li>
+ <li>12pm: 35°F</li>
+ <li>1pm: 37°F</li>
+ <li>2pm: 38°F</li>
+ <li>3pm: 39°F</li>
+ <li>4pm: 39°F</li>
+ <li>5pm: 38°F</li>
+ <li>6pm: 36°F</li>
+ <li>7pm: 34°F</li>
+ <li>8pm: 33°F</li>
+ <li>9pm: 33°F</li>
+ <li>10pm: 31°F</li>
+ <li>11pm: 31°F</li>
+    </ul>
+        </section>
 </main>
 <footer>
  &copy;2018 Weather Site

@@ -1,3 +1,118 @@
 /*This is for the weather site and screened devices*/
+
+/************************* 
+* CSS Table of Contents
+* 1. Imports
+* 2. General Styles
+* 2a. Layouts for general
+* 2b. Boxes
+* 3. Mobile Styles
+* 4. Large Screen Styles
+*/
+
+/*************************
+* 1. Imports
+*********************** */
 /*copied sansita font from Google Fonts*/
 @import url('https://fonts.googleapis.com/css?family=Sansita');
+
+/*Import the normalize stylesheet*/
+@import url('normalize.css');
+
+/*************************
+* 2. General Styles
+*********************** */
+body{
+    font-family: helvetica, arial, sans-serif;
+    font-size: 20px;
+    margin: 0; /* remove any margin from body */
+    padding: 0; /* ditto for padding */
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: sansita;
+}
+
+#curtemp {
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+}
+/*************************
+* 2a. Layout for general
+*********************** */
+logo {
+     height: 4em;
+    align-content: center;
+}
+#site-brand {
+    font-size: 2em;
+    font-weight: 600;
+}
+#page-nav ul li {
+    display: inline-block;
+    list-style: none;
+}
+div #page-nav {
+    height: auto;
+    border: 1px solid black;
+}
+#page-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+#wind, #temp {
+    display: inline-block;
+    margin-left: auto;
+}
+/*2b. Boxes*/
+#curWeather{
+    background-color: gainsboro;
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 15px;
+    background-size: cover;
+}
+
+#video{
+    background-color: gainsboro;
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 15px;
+    background-size: cover;
+}
+
+#page-nav {
+    background-color: aqua;
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 15px;
+    background-size: cover;
+}
+
+
+* {
+ box-sizing: border-box; /* changes width property
+    to total width instead of content width */
+}
+*:before, *:after{
+ box-sizing: border-box;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main,
+figcaption,
+figure {
+ display: block; /* just in case we have
+any older browsers that don't recognize
+the HTML5 semantic elements */
+}
+
+footer{
+  margin-bottom: 2em;
+}
