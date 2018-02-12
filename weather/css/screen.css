@@ -29,14 +29,21 @@ body{
     padding: 0; /* ditto for padding */
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: sansita;
+    font-family: Sansita, "second choice", generic-family;
 }
 
-#curtemp {
+#curTemp {
     font-size: 3em;
     margin: 0;
     padding: 0;
 }
+#hi {
+    color:red;
+}
+#lo {
+    color:blue;
+}
+
 /*************************
 * 2a. Layout for general
 *********************** */
@@ -61,6 +68,13 @@ div #page-nav {
     bottom: 0;
     left: 0;
 }
+nav a:link {
+    text-decoration: none;
+    color: blue;
+}
+nav a:hover {
+    color: darkmagenta;
+}
 #wind, #temp {
     display: inline-block;
     margin-left: auto;
@@ -72,6 +86,10 @@ div #page-nav {
     border: 1px solid;
     border-radius: 15px;
     background-size: cover;
+}
+#curWeather{
+  background-image: url("sunny-winter.jpg");
+  background-size: cover;
 }
 
 #video{
@@ -112,7 +130,16 @@ figure {
 any older browsers that don't recognize
 the HTML5 semantic elements */
 }
-
+/*************************
+* 3. Small Screens
+*********************** */
+#smallScreens {
+     background-color: gainsboro;
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 15px;
+    background-size: cover;
+}
 footer{
   margin-bottom: 2em;
 }
