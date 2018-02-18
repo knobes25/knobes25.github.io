@@ -6,6 +6,7 @@
 * 2. General Styles
 * 2a. Layouts for general
 * 2b. Boxes
+* 2c. Fonts
 * 3. Mobile Styles
 * 4. Large Screen Styles
 */
@@ -22,93 +23,6 @@
 /*************************
 * 2. General Styles
 *********************** */
-body{
-    font-family: helvetica, arial, sans-serif;
-    font-size: 20px;
-    margin: 0; /* remove any margin from body */
-    padding: 0; /* ditto for padding */
-}
-h1, h2, h3, h4, h5, h6 {
-    font-family: Sansita, "second choice", generic-family;
-}
-
-#curTemp {
-    font-size: 3em;
-    margin: 0;
-    padding: 0;
-}
-#hi {
-    color:red;
-}
-#lo {
-    color:blue;
-}
-
-/*************************
-* 2a. Layout for general
-*********************** */
-logo {
-     height: 4em;
-    align-content: center;
-}
-#site-brand {
-    font-size: 2em;
-    font-weight: 600;
-}
-#page-nav ul li {
-    display: inline-block;
-    list-style: none;
-}
-div #page-nav {
-    height: auto;
-    border: 1px solid black;
-}
-#page-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-}
-nav a:link {
-    text-decoration: none;
-    color: blue;
-}
-nav a:hover {
-    color: darkmagenta;
-}
-#wind, #temp {
-    display: inline-block;
-    margin-left: auto;
-}
-/*2b. Boxes*/
-#curWeather{
-    background-color: gainsboro;
-    margin: .2em auto;
-    border: 1px solid;
-    border-radius: 15px;
-    background-size: cover;
-}
-#curWeather{
-  background-image: url("sunny-winter.jpg");
-  background-size: cover;
-}
-
-#video{
-    background-color: gainsboro;
-    margin: .2em auto;
-    border: 1px solid;
-    border-radius: 15px;
-    background-size: cover;
-}
-
-#page-nav {
-    background-color: aqua;
-    margin: .2em auto;
-    border: 1px solid;
-    border-radius: 15px;
-    background-size: cover;
-}
-
-
 * {
  box-sizing: border-box; /* changes width property
     to total width instead of content width */
@@ -130,16 +44,172 @@ figure {
 any older browsers that don't recognize
 the HTML5 semantic elements */
 }
+body{
+    font-family: helvetica, arial, sans-serif;
+    font-size: 20px;
+    margin: 0; /* remove any margin from body */
+    padding: 0; /* ditto for padding */
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: Sansita, "second choice", generic-family;
+}
+h2{
+    display: none;
+}
+h3 {
+    display: none;
+}
+
+#curTemp {
+    font-size: 4em;
+    margin: 0;
+    padding: 0;
+}
+#hi {
+    color:red;
+}
+#lo {
+    color:blue;
+}
+
+/*************************
+* 2a. Layout for general
+*********************** */
+logo {
+     height: 4em;
+    align-content: center; 
+    
+}
+#site-brand{
+    font-size: 2em;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    background-color: #0e89d5;
+}
+#locationInfo dd, dt {
+    display: inline-flex;
+}
+#page-nav ul {
+    justify-content: space-between;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-size: 4vw;
+}
+nav ul li {
+/*    display: inline-block;*/
+    list-style: none;
+}
+div #page-nav {
+    height: auto;
+    border: 1px;
+    
+}
+#page-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: blue;
+    width: 100vw;
+    font-size: 3.5vw;
+        
+}
+nav a:link {
+    text-decoration: none;
+    color: blue;
+}
+nav a:hover {
+    color: darkmagenta;
+}
+#wind, #temp {
+    display: inline-block;
+    margin-left: auto;
+}
+#hourly ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+/**********************
+* 2b. Boxes
+**********************/
+#curWeather{
+    background-color: gainsboro;
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 15px;
+    background-size: cover;
+}
+#curWeather{
+  background-image: url("sunny-winter.jpg");
+  background-size: contain;
+}
+
+#video{
+    background-color: rgba(200,200,200,.6);
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 15px;
+    background-size: cover;
+}
+
+#page-nav {
+    background-color: #0e89d5;
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius:1px;
+    background-size: cover;
+}
+footer {
+     background-color: #0e89d5;
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 1px;
+    background-size: cover;
+}
+
+
 /*************************
 * 3. Small Screens
 *********************** */
 #smallScreens {
-     background-color: gainsboro;
-    margin: .2em auto;
+     background-color: rgba(200,200,200,.6);
+    margin: .2em auto; 
     border: 1px solid;
     border-radius: 15px;
     background-size: cover;
 }
 footer{
   margin-bottom: 2em;
+}
+/*************************
+* 5. Wind Dial
+*********************** */
+#dial {
+    background: no-repeat center/85% url('plan-images/wind-pointer.png');
+    height: 150px;
+    width: 150px;
+    z-index: 100;
+    margin: -.6em auto 0;
+}
+#wind .north {
+    font-size: smaller;
+    margin: .5em 0 0 0;
+    text-align: center;
+}
+#wind-speed {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 45%
+}
+.north {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+.nw {
+    -webkit-transform: rotate(315deg);
+    transform: rotate(315deg);
 }

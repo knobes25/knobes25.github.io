@@ -10,8 +10,9 @@
 
 <body>
     <header>
-        <div id="logo">&#9748;</div>
-        <h1 id="site-brand">The Weather Site</h1>
+        <div id="logo"><img src="/Images/plan-images/logo.jpeg" alt="logo">
+        <div id="site-brand">The Weather Site</div>
+            </div>
     </header>
     <nav id="page-nav">
         <ul>
@@ -26,7 +27,16 @@
     <main>
         <h1>Franklin, ID</h1>
         <section id="locationInfo">
-            <p><b>Zip:</b> 83237 | <b>Elevation:</b> 4501 ft. | <b>Location:</b> 42.0135 N, 111.8072 W</p>
+             <dl>
+    <dt>Zip:</dt>
+    <dd>83237</dd>
+    <dt>Elevation:</dt>
+    <dd>4968 ft.</dd>
+    <dt>Location:</dt>
+    <dd>42.07° N, 111.79° W</dd>
+    </dl>
+
+
         </section>
         <div id="curWeather">
             <div id="smallScreens">
@@ -38,8 +48,9 @@
                 </section>
                 <section id="wind">
                     <h2>Wind</h2>
+                    <p class="north">N</p>
                     <div id="dial" class="nw">
-                        <p>N<br> 2 mph</p>
+                        <p id="wind-speed">2 mph</p>
                     </div>
                     <div id="windInfo">
                         <ul>
@@ -51,7 +62,7 @@
             </div>
             <section id="video">
                 <h3>Video Forecast</h3>
-                <p>Broken Link</p>
+                <img src="/Images/plan-images/video.png" alt="Video Icon">
             </section>
         </div>
         <section id="hourly">
