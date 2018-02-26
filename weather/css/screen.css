@@ -8,27 +8,35 @@
 * 2b. Boxes
 * 2c. Fonts
 * 3. Mobile Styles
-* 4. Large Screen Styles
+* 4. Wind Dial
+* 5. Large Screen Styles
 */
 
 /*************************
 * 1. Imports
 *********************** */
+
 /*copied sansita font from Google Fonts*/
+
 @import url('https://fonts.googleapis.com/css?family=Sansita');
 
 /*Import the normalize stylesheet*/
+
 @import url('normalize.css');
 
 /*************************
 * 2. General Styles
 *********************** */
+
 * {
- box-sizing: border-box; /* changes width property
+    box-sizing: border-box;
+    /* changes width property
     to total width instead of content width */
 }
-*:before, *:after{
- box-sizing: border-box;
+
+*:before,
+*:after {
+    box-sizing: border-box;
 }
 
 article,
@@ -40,22 +48,34 @@ section,
 main,
 figcaption,
 figure {
- display: block; /* just in case we have
+    display: block;
+    /* just in case we have
 any older browsers that don't recognize
 the HTML5 semantic elements */
 }
-body{
+
+body {
     font-family: helvetica, arial, sans-serif;
     font-size: 20px;
-    margin: 0; /* remove any margin from body */
-    padding: 0; /* ditto for padding */
+    margin: 0;
+    /* remove any margin from body */
+    padding: 0;
+    /* ditto for padding */
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: Sansita, "second choice", generic-family;
 }
-h2{
+
+h2 {
     display: none;
 }
+
 h3 {
     display: none;
 }
@@ -65,31 +85,37 @@ h3 {
     margin: 0;
     padding: 0;
 }
+
 #hi {
-    color:red;
+    color: red;
 }
+
 #lo {
-    color:blue;
+    color: blue;
 }
 
 /*************************
 * 2a. Layout for general
 *********************** */
+
 logo {
-     height: 4em;
-    align-content: center; 
-    
+    height: 4em;
+    align-content: center;
+
 }
-#site-brand{
+
+#site-brand {
     font-size: 2em;
     font-weight: 600;
-    display: flex;
-    justify-content: center;
+    display: inherit;
     background-color: #0e89d5;
 }
-#locationInfo dd, dt {
+
+#locationInfo dd,
+dt {
     display: inline-flex;
 }
+
 #page-nav ul {
     justify-content: space-between;
     display: flex;
@@ -97,15 +123,18 @@ logo {
     padding: 0;
     font-size: 4vw;
 }
+
 nav ul li {
-/*    display: inline-block;*/
+    /*    display: inline-block;*/
     list-style: none;
 }
+
 div #page-nav {
     height: auto;
     border: 1px;
-    
+
 }
+
 #page-nav {
     position: fixed;
     bottom: 0;
@@ -113,42 +142,53 @@ div #page-nav {
     background-color: blue;
     width: 100vw;
     font-size: 3.5vw;
-        
+
 }
+
 nav a:link {
     text-decoration: none;
-    color: blue;
+    color: white;
 }
+
 nav a:hover {
     color: darkmagenta;
 }
-#wind, #temp {
+
+#wind,
+#temp {
     display: inline-block;
     margin-left: auto;
 }
+
 #hourly ul {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    
+    list-style: none;
+    overflow-x: scroll;
+    flex-flow: row;
+    white-space: nowrap;
+    padding: 2.5vw;
+    font-size: 3vw;
 }
+
 /**********************
 * 2b. Boxes
 **********************/
-#curWeather{
+
+#curWeather {
     background-color: gainsboro;
     margin: .2em auto;
     border: 1px solid;
     border-radius: 15px;
     background-size: cover;
 }
-#curWeather{
-  background-image: url("sunny-winter.jpg");
-  background-size: contain;
+
+#curWeather {
+    background-image: url("sunny-winter.jpg");
+    background-size: contain;
 }
 
-#video{
-    background-color: rgba(200,200,200,.6);
+#video {
+    background-color: rgba(200, 200, 200, .6);
     margin: .2em auto;
     border: 1px solid;
     border-radius: 15px;
@@ -159,11 +199,12 @@ nav a:hover {
     background-color: #0e89d5;
     margin: .2em auto;
     border: 1px solid;
-    border-radius:1px;
+    border-radius: 1px;
     background-size: cover;
 }
+
 footer {
-     background-color: #0e89d5;
+    background-color: #0e89d5;
     margin: .2em auto;
     border: 1px solid;
     border-radius: 1px;
@@ -174,19 +215,24 @@ footer {
 /*************************
 * 3. Small Screens
 *********************** */
-#smallScreens {
-     background-color: rgba(200,200,200,.6);
-    margin: .2em auto; 
+
+#smallScreens,
+#hourly {
+    background-color: rgba(200, 200, 200, .6);
+    margin: .2em auto;
     border: 1px solid;
     border-radius: 15px;
     background-size: cover;
 }
-footer{
-  margin-bottom: 2em;
+
+footer {
+    margin-bottom: 2em;
 }
+
 /*************************
-* 5. Wind Dial
+* 4. Wind Dial
 *********************** */
+
 #dial {
     background: no-repeat center/85% url('plan-images/wind-pointer.png');
     height: 150px;
@@ -194,22 +240,116 @@ footer{
     z-index: 100;
     margin: -.6em auto 0;
 }
+
 #wind .north {
     font-size: smaller;
     margin: .5em 0 0 0;
     text-align: center;
 }
+
 #wind-speed {
     width: 100%;
     text-align: center;
     position: relative;
-    top: 45%
+    top: 46%;
 }
+
 .north {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
 }
+
 .nw {
     -webkit-transform: rotate(315deg);
     transform: rotate(315deg);
+}
+
+/***************************
+* 5. Large Screens
+***************************/
+
+@media screen and (min-width: 760px) {
+    /*    Center the content on the screen*/
+    body > div {
+        width: 1100px;
+        margin: 0 auto;
+    }
+    h2,
+    h3 {
+        display: block;
+    }
+    #site-brand {
+        font-size: 55px;
+        font-weight: 400;
+        margin: 0;
+    }
+    #curWeather {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1em 0;
+    }
+    #page-nav {
+        position: relative;
+        font-size: inherit;
+        width: auto;
+        border: 2px solid black;
+
+    }
+    #page-nav ul {
+        margin-bottom: 1px;
+        margin-top: 1px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #temp {
+        border: 2px solid black;
+        border-radius: 25px;
+        background-color: rgba(200, 200, 200, .0);
+        margin-right: 40px;
+        margin-left: 40px;
+        margin-bottom: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .smallScreens {
+        background-color: rgba(200, 200, 200, .0);
+        border: 0px solid;
+        border-radius: 15px;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+    }
+    #wind {
+        text-align: center;
+        border: 2px solid #000000;
+        border-radius: 25px;
+        background-color:rgba(200, 200, 200, .6);
+        font-size: inherit;
+        margin: 0px;
+        padding-left: 60px;
+        padding-right: 60px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    #wind-speed {
+        top: 44%;
+        right: 0.5%;
+    }
+
+    #wind-info {
+        margin: 0;
+    }
+
+    #video {
+        border: 2px solid #000000;
+        border-radius: 25px;
+        background-color: rgba(200, 200, 200, .6);
+        margin-top: 44.21px;
+        margin-bottom: 44.21px;
+        margin-left: 50px;
+        padding-left: 9.5px;
+        padding-right: 9.5px;
+    }
+
 }
