@@ -153,11 +153,11 @@ div #page-nav {
 
 nav a:link {
     text-decoration: none;
-    color: white;
+    color: #FFF;
 }
 
 nav a:hover {
-    color: darkmagenta;
+    color: purple;
 }
 
 #wind,
@@ -189,7 +189,7 @@ nav a:hover {
 }
 
 #curWeather {
-    background-image: url("sunny-winter.jpg");
+    background-image: url("plan-images/raindrops.jpg");
     background-size: contain;
 }
 
