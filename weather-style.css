@@ -1,0 +1,12 @@
+/*This is the CSS for the Weather Images Page*/
+.bigScreen {
+    display: none;
+}
+@media (min-width: 800px) {
+    .bigScreen {
+        display: block;
+    }
+    .smallScreen {
+        display: none;
+    }
+}

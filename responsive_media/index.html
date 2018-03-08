@@ -11,7 +11,6 @@
 <body>
 	<div class="wrapper">
 		<header class="page-header">
-           <img src="images/grand-canyon_1200.jpg" srcset="images/grand-canyon_400.jpg 400w, images/grand-canyon_800.jpg 800w, images/grand-canyon_1200.jpg 1200w">
 			<h1>Responsive Media Demo</h1>
 		</header>
 		<nav class="page-nav">
@@ -28,12 +27,12 @@
 
 			<figure class="featured-image">
                 <picture>
-                    <source srcset="responsive_media/images/cactus_400.jpg" media="(max-width: 400px)">
-                    <source srcset="responsive_media/images/cactus_900.jpg" media="(max-width: 900px)">
-                    <img src="responsive_media/images/cactus_1600.jpg" alt="Cactus" style="width:auto;">
+                    <source srcset="/responsive_media/images/cactus_400.jpg" media="(max-width: 500px)">
+                    <source srcset="/responsive_media/images/cactus_900.jpg" media="(max-width: 900px)">
+                   <source                 srcset="/responsive_media/images/cactus_1600.jpg"
+                     media="(max-width:1400px)">
+                   <img src="/responsive_media/images/cactus_1600.jpg" alt="Cactus" style="width:auto;">
                 </picture>
-
-				<img src="images/cactus_1600.jpg" alt="Picture from the Grand Canyon">
 
 				<figcaption class="image-caption">
 					Fun in the Grand Canyon
