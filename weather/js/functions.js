@@ -95,7 +95,7 @@ function getCondition(phrase) {
              }
     else if (phrase.includes('snow') || phrase.includes('snowy') || phrase.includes('snowing') || phrase.includes('blizzard')) {
         let keyword = 'snow';
-        console.log;
+        console.log(keyword);
         return keyword;
     }
 }
