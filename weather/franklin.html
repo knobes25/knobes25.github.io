@@ -43,14 +43,14 @@
                     <h2>Temperature</h2>
                     <p id="curTemp"><b>24&deg;F</b></p>
                     <p><span id="hi">34&deg;F</span> <span id="lo">21&deg;F</span></p>
-                    <p id="feel">Feels Like 21&deg;F</p>
+                    <p id="feel">Feels Like: <span id="feelTemp">21</span>&deg;F</p>
                 </section>
                 <section id="wind">
                     <h2>Wind</h2>
                     <p class="north">N</p>
-                    <div id="dial" class="nw">
+                    <div id="dial" class="nw"></div>
                         <p id="wind-speed">2 mph</p>
-                    </div>
+                    
                     <div id="windInfo">
                         <ul>
                             <li> <b>Direction:</b> NW</li>
@@ -97,5 +97,7 @@
     <footer>
         &copy;2018 Weather Site
     </footer>
+    <script src="/weather/js/functions.js"></script>
+
 </body>
 </html>

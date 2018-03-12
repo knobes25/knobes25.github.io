@@ -188,9 +188,9 @@ nav a:hover {
     background-size: cover;
 }
 
-#curWeather {
+/*#curWeather {
     background-image: url("plan-images/raindrops.jpg");
-    background-size: contain;
+    background-size: cover;*/
 }
 
 #video {
@@ -234,6 +234,23 @@ footer {
 footer {
     margin-bottom: 2em;
 }
+ }
+    .clear{
+        background-image: url(/responsive_media/images/clear_400.jpg);
+    }
+    .clouds {
+        background-image: url(/responsive_media/images/clouds_400.jpg);
+    }
+    .fog {
+        background-image: url(/responsive_media/images/fog_400.jpg);
+    }
+    .rain {
+        background-image: url(/responsive_media/images/rain_400.jpg);
+    }
+    .snow {
+        background-image: url(/responsive_media/images/snow_400.jpg);
+    }
+
 
 /*************************
 * 4. Wind Dial
@@ -261,13 +278,29 @@ footer {
 }
 
 .north {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
 }
 
 .nw {
-    -webkit-transform: rotate(315deg);
     transform: rotate(315deg);
+}
+.west {
+    transform: rotate(270deg);
+}
+.sw {
+    transform: rotate(225deg);
+}
+.south {
+    transform: rotate(180deg);
+}
+.se {
+    transform: rotate(135deg);
+}
+.east {
+    transform: rotate(90deg);
+}
+.ne {
+    transform: rotate(45deg);
 }
 
 /***************************
@@ -361,6 +394,24 @@ footer {
         margin-left: 50px;
         padding-left: 9.5px;
         padding-right: 9.5px;
+    }
+    #curWeather {
+        background-size: cover;
+    }
+    .clear{
+        background-image: url(/responsive_media/images/clear_800.jpg);
+    }
+    .clouds {
+        background-image: url(/responsive_media/images/clouds_800.jpg);
+    }
+    .fog {
+        background-image: url(/responsive_media/images/fog_800.jpg);
+    }
+    .rain {
+        background-image: url(/responsive_media/images/rain_800.jpg);
+    }
+    .snow {
+        background-image: url(/responsive_media/images/snow_800.jpg);
     }
 
 }
