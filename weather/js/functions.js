@@ -129,4 +129,98 @@ function changeSummaryImage(keyword) {
             curWeather.setAttribute("class", "snow");
             break;
     }
-    }}
+    }
+
+// Get Data from API
+function getData(LOCALE) {
+  const WU_API_KEY = 'd3e5f139fafcc77d';
+  const URL = "https://api.wunderground.com/api/" + WU_API_KEY + "/conditions/q/" + LOCALE + ".json";
+  fetch(URL)
+   .then(response => response.json())
+   .then(function (data) {
+    console.log('Json object from getData function:');
+    console.log(data);
+    displayData(data);
+    })
+   .catch(error => console.log('There was an error: ', error))
+} // end getData function
+
+function getHourly(LOCALE) {
+    const WU_API_KEY = 'd3e5f139fafcc77d';
+  const URL = "https://api.wunderground.com/api/" + WU_API_KEY + "/hourly/q/" + LOCALE + ".json";
+  fetch(URL)
+   .then(response => response.json())
+   .then(function (data) {
+    console.log('Json object from getHourly function:');
+    console.log(data);
+    })
+   .catch(error => console.log('There was an error: ', error))
+}
+function getSat(LOCALE) {
+     const WU_API_KEY = 'd3e5f139fafcc77d';
+  const URL = "https://api.wunderground.com/api/" + WU_API_KEY + "/satellite/q/" + LOCALE + ".json";
+  fetch(URL)
+   .then(response => response.json())
+   .then(function (data) {
+    console.log('Json object from getSat function:');
+    console.log(data);
+      document.getElementById("satImg").src = data.satellite.image_url;
+    })
+   .catch(error => console.log('There was an error: ', error))
+}
+function getForecast(LOCALE) {
+     const WU_API_KEY = 'd3e5f139fafcc77d';
+  const URL = "https://api.wunderground.com/api/" + WU_API_KEY + "/forecast/q/" + LOCALE + ".json";
+  fetch(URL)
+   .then(response => response.json())
+   .then(function (ralph) {
+    console.log('Json object from forecast function:');
+    console.log(ralph);
+    document.getElementById("hi").innerHTML = ralph.forecast.simpleforecast.forecastday["0"].high.fahrenheit;
+    document.getElementById("lo").innerHTML = ralph.forecast.simpleforecast.forecastday["0"].low.fahrenheit;
+    
+    })
+   .catch(error => console.log('There was an error: ', error))
+}
+
+function displayData() {
+    let curTemp = data.current_observation.temp_f;
+    let curLoc = data.current_observation.display_location.full;
+    console.log(curTemp);
+    document.getElementById("curTemp").innerHTML= Math.round(curTemp) + "&deg;F";
+    console.log(curLoc);
+    document.getElementById("franklin").innerHTML = curLoc;
+    document.getElementById("curLoc").innerHTML = curLoc;
+    let phrase = data.current_observation.weather;
+    let speed = data.current_observation.wind_mph;
+    let direction = data.current_observation.wind_dir;
+    let weather = getCondition(phrase);
+    let img2 = data.current_observation.icon_url;
+    buildWC(speed,curTemp);
+    windDial(direction);
+    changeBackgroundImage(weather);
+    document.getElementById("vidImg").src = img2;
+    document.getElementById("wind-speed").innerHTML = Math.round(data.current_observation.wind_mph);
+    document.getElementById("wind-gust").innerHTML = Math.round(data.current_observation.wind_gust_mph);
+    document.getElementById("wind-dir").innerHTML = data.current_observation.wind_dir;
+    document.getElementById("zip").innerHTML = data.current_observation.display_location.zip;
+    document.getElementById("elevation").innerHTML = Math.round(lengthConverter(data.current_observation.display_location.elevation));
+    document.getElementById("curLat").innerHTML = data.current_observation.display_location.latitude + '&deg; N, ';
+    document.getElementById("curLong").innerHTML = data.current_observation.display_location.longitude + '&deg; W';
+    
+}
+
+let TEMP = 41.1;
+roundTemp(TEMP);
+const elev = 1511;
+convertFeet(elev);
+function roundTemp(temp) {
+    let x=Math.round(temp);
+    console.log(x);
+    return x;
+}
+function convertFeet(elev) {
+    let feet = Math.round(elev*3.2808);
+    consol.log(feet);
+    return feet;
+}
