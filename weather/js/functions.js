@@ -2,6 +2,8 @@
 *  Weather Site JavaScript Functions
 ************************************* */
 //console.log('My javascript is being read.');
+//My API key
+//d3e5f139fafcc77d
 //Variables for Function Use
 const temp = 31;
 const speed = 5;
@@ -127,4 +129,4 @@ function changeSummaryImage(keyword) {
             curWeather.setAttribute("class", "snow");
             break;
     }
-    }
+    }}
