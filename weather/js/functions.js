@@ -5,24 +5,18 @@
 //My API key
 //d3e5f139fafcc77d
 //Variables for Function Use
-const temp = 31;
-const speed = 5;
-buildWC(speed, temp);
-const direction ="NE";
-const phrase = 'it is snowing';
-windDial(direction);
-let keyword = getCondition(phrase);
-changeSummaryImage(keyword);
+
+
 //this will calculate the function
-function buildWC(speed, temp) {
- const feelTemp = document.getElementById('feelTemp'); 
+function buildWC(speed, curTemp) {
+  
     // Compute the windchill
- let wc = 35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16);
+ let wc = 35.74 + 0.6215 * curTemp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * curTemp * Math.pow(speed, 0.16);
  console.log(wc);
     // Round the answer down to integer
  wc = Math.floor(wc);
     // If chill is greater than temp, return the temp
- wc = (wc > temp)?temp:wc;
+ wc = (wc > curTemp)?curTemp:wc;
 // Display the windchill
  console.log(wc);
  feelTemp.innerHTML = wc;
@@ -77,7 +71,7 @@ const dial = document.getElementById("dial");
 function getCondition(phrase) {
     if (phrase.includes('Cloudy') || phrase.includes('Overcast')) {
         let keyword='clouds';
-        console.log(keyword)
+        console.log(keyword);
         return  keyword;
     }
     else if (phrase.includes('foggy') || phrase.includes('fog')) {                               
@@ -110,7 +104,7 @@ function getCondition(phrase) {
 
 //This function changes the background image
 function changeSummaryImage(keyword) {
-    const curWeather = document.getElementById('curWeather');
+    //const curWeather = document.getElementById('curWeather');
     
     switch(keyword) {
             case "clouds":
@@ -176,31 +170,31 @@ function getForecast(LOCALE) {
    .then(function (ralph) {
     console.log('Json object from forecast function:');
     console.log(ralph);
-    document.getElementById("hi").innerHTML = ralph.forecast.simpleforecast.forecastday["0"].high.fahrenheit;
-    document.getElementById("lo").innerHTML = ralph.forecast.simpleforecast.forecastday["0"].low.fahrenheit;
+    document.getElementById("hi").innerHTML = ralph.forecast.simpleforecast.forecastday["0"].high.fahrenheit + '&deg;F';
+    document.getElementById("lo").innerHTML = ralph.forecast.simpleforecast.forecastday["0"].low.fahrenheit  + '&deg;F';
     
     })
    .catch(error => console.log('There was an error: ', error))
 }
 
-function displayData() {
+function displayData(data) {
     let curTemp = data.current_observation.temp_f;
     let curLoc = data.current_observation.display_location.full;
     console.log(curTemp);
     document.getElementById("curTemp").innerHTML= Math.round(curTemp) + "&deg;F";
     console.log(curLoc);
-    document.getElementById("franklin").innerHTML = curLoc;
+    document.getElementById("location").innerHTML = curLoc;
     document.getElementById("curLoc").innerHTML = curLoc;
     let phrase = data.current_observation.weather;
     let speed = data.current_observation.wind_mph;
     let direction = data.current_observation.wind_dir;
-    let weather = getCondition(phrase);
+    let keyword = getCondition(phrase);
     let img2 = data.current_observation.icon_url;
     buildWC(speed,curTemp);
     windDial(direction);
-    changeBackgroundImage(weather);
+    changeSummaryImage(keyword);
     document.getElementById("vidImg").src = img2;
-    document.getElementById("wind-speed").innerHTML = Math.round(data.current_observation.wind_mph);
+    document.getElementById("wind-speed").innerHTML = Math.round(data.current_observation.wind_mph) + 'mph';
     document.getElementById("wind-gust").innerHTML = Math.round(data.current_observation.wind_gust_mph);
     document.getElementById("wind-dir").innerHTML = data.current_observation.wind_dir;
     document.getElementById("zip").innerHTML = data.current_observation.display_location.zip;
@@ -210,7 +204,7 @@ function displayData() {
     
 }
 
-let TEMP = 41.1;
+/*let TEMP = 41.1;
 roundTemp(TEMP);
 const elev = 1511;
 convertFeet(elev);
@@ -218,9 +212,9 @@ function roundTemp(temp) {
     let x=Math.round(temp);
     console.log(x);
     return x;
-}
-function convertFeet(elev) {
-    let feet = Math.round(elev*3.2808);
-    consol.log(feet);
+}*/
+function lengthConverter(elevation) {
+    let feet = Math.round(elevation*3.2808);
+    console.log(feet);
     return feet;
 }

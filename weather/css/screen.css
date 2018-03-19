@@ -100,9 +100,12 @@ img{
 /*************************
 * 2a. Layout for general
 *********************** */
-.hide {
-   display: none;
- }
+#wunderground {
+    height: 8vw;
+}
+#found {
+    display: none;
+}
 
 #success {
     display: contents ;
@@ -257,19 +260,19 @@ footer {
     margin-bottom: 2em;
 }
  
-    .clear{
+    #curWeather.clear{
         background-image: url(/responsive_media/images/clear_400.jpg);
     }
-    .clouds {
+    #curWeather.clouds {
         background-image: url(/responsive_media/images/clouds_400.jpg);
     }
-    .fog {
+    #curWeather.fog {
         background-image: url(/responsive_media/images/fog_400.jpg);
     }
-    .rain {
+    #curWeather.rain {
         background-image: url(/responsive_media/images/rain_400.jpg);
     }
-    .snow {
+    #curWeather.snow {
         background-image: url(/responsive_media/images/snow_400.jpg);
     }
 
@@ -427,19 +430,19 @@ footer {
     #curWeather {
         background-size: cover;
     }
-    .clear{
+    #curWeather.clear{
         background-image: url(/responsive_media/images/clear_800.jpg);
     }
-    .clouds {
+    #curWeather.clouds {
         background-image: url(/responsive_media/images/clouds_800.jpg);
     }
-    .fog {
+    #curWeather.fog {
         background-image: url(/responsive_media/images/fog_800.jpg);
     }
-    .rain {
+    #curWeather.rain {
         background-image: url(/responsive_media/images/rain_800.jpg);
     }
-    .snow {
+    #curWeather.snow {
         background-image: url(/responsive_media/images/snow_800.jpg);
     }
 

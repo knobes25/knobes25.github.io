@@ -8,8 +8,8 @@ getGeoLocation();
 
 // Gets longitude and latitude of current location
 function getGeoLocation() {
-     const STATUS = document.getElementById('status');
- STATUS.innerHTML = 'Getting Location...';
+     locating.innerHTML= "getting location";
+    success.setAttribute("id", "fail");
     if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function (position) {
    const LAT = position.coords.latitude;
@@ -24,7 +24,7 @@ getHourly(LOCALE);
       getSat(LOCALE);
       getForecast(LOCALE);
       fail.setAttribute("id", "success");
-      document.getElementById('locating').innerHTML = "";
+      locating.setAttribute("id", "found");
 
   })
  } else {
