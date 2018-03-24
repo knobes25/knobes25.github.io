@@ -180,6 +180,9 @@ function getForecast(LOCALE) {
 function displayData(data) {
     let curTemp = data.current_observation.temp_f;
     let curLoc = data.current_observation.display_location.full;
+    let curCondition = data.current_observation.display_forecastday;
+    console.log(curCondition);
+    document.getElementById("curCondition").innerHTML = curCondition;
     console.log(curTemp);
     document.getElementById("curTemp").innerHTML= Math.round(curTemp) + "&deg;F";
     console.log(curLoc);

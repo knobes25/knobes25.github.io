@@ -123,7 +123,9 @@ img{
     display: none;
 }
 #satImg{
-    width:100%
+    display: none;
+    width:50%;
+    height: auto;
 }
 #page-header {
     font-family: Sansita;
