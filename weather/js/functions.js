@@ -69,7 +69,7 @@ const dial = document.getElementById("dial");
 
 //Function that determines the weather condition
 function getCondition(phrase) {
-    if (phrase.includes('Cloudy') || phrase.includes('Overcast')) {
+    if (phrase.includes('Cloudy') || phrase.includes('Overcast') || phrase.includes('clouds')) {
         let keyword='clouds';
         console.log(keyword);
         return  keyword;
@@ -179,8 +179,11 @@ function getForecast(LOCALE) {
 
 function displayData(data) {
     let curTemp = data.current_observation.temp_f;
+    
     let curLoc = data.current_observation.display_location.full;
+    
     let curCondition = data.current_observation.weather;
+    
     console.log(curCondition);
     document.getElementById("curCondition").innerHTML = curCondition;
     console.log(curTemp);

@@ -35,14 +35,14 @@ function processJSON(json) {
 
 // Inject list into the searchResults section of the web page
 searchResults.innerHTML = list;
-    searchResults.classList.remove("hide");
+    searchResults.classList.remove("success");
 } // ends the processJSON function
 
 const searchResults = document.getElementById("searchResults");
 //Detect when one of the links in the searchResults list has been clicked
 searchResults.addEventListener("click", function(event) {
     let loc = event.target.dataset.location;
-    onclick=event.preventDefault();
+    event.preventDefault();
     console.log('locVariable: '+ loc);
     
     getData(loc);
