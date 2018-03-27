@@ -4,6 +4,7 @@ const QUERY = document.getElementById("query");
 
 // Listen for search entries, get matching locations
 QUERY.addEventListener("keyup", function () {
+    
  let value = QUERY.value;
 
  // Create a new script element
@@ -35,7 +36,7 @@ function processJSON(json) {
 
 // Inject list into the searchResults section of the web page
 searchResults.innerHTML = list;
-    searchResults.classList.remove("success");
+    searchResults.classList.remove("hide");
 } // ends the processJSON function
 
 const searchResults = document.getElementById("searchResults");

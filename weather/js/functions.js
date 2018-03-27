@@ -207,7 +207,15 @@ function displayData(data) {
     document.getElementById("elevation").innerHTML = Math.round(lengthConverter(data.current_observation.display_location.elevation));
     document.getElementById("curLat").innerHTML = data.current_observation.display_location.latitude + '&deg; N, ';
     document.getElementById("curLong").innerHTML = data.current_observation.display_location.longitude + '&deg; W';
+    document.getElementById("success").setAttribute("id", "display");
+     document.getElementById("searchResults").setAttribute("id", "success");
 }
+
+// Listen for search entries, get matching locations
+QUERY.addEventListener("focus", function (){
+    document.getElementById("display").setAttribute("id", "success");
+     document.getElementById("success").setAttribute("id", "display");
+})
 
 /*let TEMP = 41.1;
 roundTemp(TEMP);

@@ -103,12 +103,22 @@ img{
 #wunderground {
     height: 8vw;
 }
+.hide {
+    display: none;
+}
 #found {
     display: none;
 }
 
+#searchP #success{
+    display: none;
+}
+
+#searchP #display{
+    display: block;
+}
 #success {
-    display: contents ;
+    display: contents;
 }
 
 #locating{
