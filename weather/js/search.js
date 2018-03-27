@@ -29,19 +29,21 @@ function processJSON(json) {
 // Use a for loop to include the results in list items
  let list = "<ul>";
  for (let i = 0, n = json.RESULTS.length; i < n; i++) {
-  list += "<li><a data-location='zmw:"+ json.RESULTS[i].zmw +"' href='https://wunderground.com/" + json.RESULTS[i].l + "' title='See weather information for " + json.RESULTS[i].name + "' target='_blank''>" + json.RESULTS[i].name + "</a></li>";
+  list += "<li><a data-location='zmw:"+ json.RESULTS[i].zmw +"' href='https://wunderground.com/" + json.RESULTS[i].l + "' title='See weather information for " + json.RESULTS[i].name + "' target='_blank' onclick='event.preventDefault()'>" + json.RESULTS[i].name + "</a></li>";
  };
  list += "</ul>";
 
 // Inject list into the searchResults section of the web page
 searchResults.innerHTML = list;
+    searchResults.classList.remove("hide");
 } // ends the processJSON function
 
 const searchResults = document.getElementById("searchResults");
 //Detect when one of the links in the searchResults list has been clicked
 searchResults.addEventListener("click", function(event) {
     let loc = event.target.dataset.location;
-    event.preventDefault();
+    onclick=event.preventDefault();
+    console.log('locVariable: '+ loc);
     
     getData(loc);
     

@@ -180,7 +180,7 @@ function getForecast(LOCALE) {
 function displayData(data) {
     let curTemp = data.current_observation.temp_f;
     let curLoc = data.current_observation.display_location.full;
-    let curCondition = data.current_observation.display_forecastday;
+    let curCondition = data.current_observation.weather;
     console.log(curCondition);
     document.getElementById("curCondition").innerHTML = curCondition;
     console.log(curTemp);
@@ -204,7 +204,6 @@ function displayData(data) {
     document.getElementById("elevation").innerHTML = Math.round(lengthConverter(data.current_observation.display_location.elevation));
     document.getElementById("curLat").innerHTML = data.current_observation.display_location.latitude + '&deg; N, ';
     document.getElementById("curLong").innerHTML = data.current_observation.display_location.longitude + '&deg; W';
-    
 }
 
 /*let TEMP = 41.1;

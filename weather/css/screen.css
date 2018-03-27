@@ -127,6 +127,12 @@ img{
     width:50%;
     height: auto;
 }
+#curCondition{
+    display: contents;
+}
+.hideSearch{
+    display: none;
+}
 #page-header {
     font-family: Sansita;
     background-color: #0e89d5;
