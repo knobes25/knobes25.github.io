@@ -1,0 +1,113 @@
+/*Styling for the acme page*/
+/*Table of Contents
+1. Imports
+2. General Styles
+3. Nav Bar
+4. Large Screens
+*/
+
+/*Imports*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+    
+/*General Styles*/
+* {
+    box-sizing: border-box;
+    /* changes width property
+    to total width instead of content width */
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+#background{
+      background-image: url(/acme/images/site/background.jpg);
+    background-size: cover;
+}
+#white{
+    background-color: #ffffff;
+    margin: 1em;
+    width: 1100px, center;
+}
+#img-text{
+    background-image: url(/acme/images/site/feature.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#img-text ul{
+    display: flex;
+    align-items: flex-end;
+    flex-flow: column;
+    padding: 1em;
+}
+#img-text ul li{
+    list-style: none;
+    color: #990033;
+    font-size: 3vw;
+}
+#actionbtn{
+    height: 7vw;
+}
+#recipes{
+    list-style: none;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+.food-pics{
+    border: 0px;
+    background-color: lightgrey;
+    display: block;
+    font-size: 2vw;
+}
+/* 3.Nav Bar*/
+#page-nav {
+    background-color: #de2226;
+    margin: auto;
+    border: 0px solid;
+    border-radius: 0px;
+    background-size: cover;
+    
+}
+#page-nav ul {
+    justify-content: space-around;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-size: 3vw;
+    list-style: none;
+}
+nav a:link{
+    text-decoration:none;
+        
+}
+nav a:hover{
+   color: #000000;
+}
+
+/* 4. Large Screens*/
+@media screen and (min-width: 760px) {
+    /*    Center the content on the screen*/
+    body > div {
+        width: 1300px;
+        margin: 0 auto;
+    }
+    #img-text ul{
+    display: flex;
+    align-items: flex-end;
+    flex-flow: column;
+    padding: 3em;
+}
+/* 5. Product Content*/
+    .show{
+        display: contents;
+    }
+    .hide{
+        display: none;
+    }
