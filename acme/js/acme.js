@@ -1,6 +1,6 @@
 //function for the acme JSON file
 function getJson() {
-const URL = "acme/js/acme.json";
+const URL = "/acme/js/acme.json";
     fetch(URL)
         .then(response => response.json())
         .then(function(data){
