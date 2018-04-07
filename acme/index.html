@@ -4,22 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <title>ACME | Home Page</title>
-    <meta name="" content="">
+    <meta name="author" content="Kendall Noble">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="/acme/css/acme.css" media="screen">
 </head>
 <body id="background">
     <div id="white">
     <header id="head">
-        <img src="/acme/images/site/logo.png">
+        <img src="/acme/images/site/logo.png" alt="site logo">
     </header>
-    <nav id="page-nav">
+    <nav id="page_nav">
         <ul>
-            <li><a href="" title="Go to Home page">Home</a></li>
-            <li><a href="" title="Go to anvil page">Anvils</a></li>
-            <li><a href="" title="Go to Explosives page">Explosives</a></li>
-            <li><a href="" title="Go to Decoys page">Decoys</a></li>
-            <li><a href="" title="Go to Traps page">Traps</a></li>
+            <li><a id="home" href="" target="_blank" title="Home"></a></li>
+            <li><a id="Anvils" title="Go to anvil page"></a></li>
+            <li><a id="Explosives" title="Go to Explosives page"></a></li>
+            <li><a id="Decoys" title="Go to Decoys page"></a></li>
+            <li><a id="Traps" title="Go to Traps page"></a></li>
         </ul>
     </nav>
     <main>
@@ -35,7 +35,7 @@
   </ul>
         
             </div>
-         </section>
+
         <section>
             <h2>Acme Rocket Reviews</h2>
  <ul>
@@ -47,16 +47,17 @@
   </ul>
             <h2>Featured Recipes</h2>
             <ul id="recipes">
-        <li><span class="food-pics"><img src="images/recipes/bbqsand.jpg" alt="Pulled Roadrunner BBQ">
-            <p><a href="" title="">Pulled Roadrunner BBQ</a></p></span></li>
-        <li><span class="food-pics"><img src="images/recipes/potpie.jpg" alt="Roadrunner Pot Pie">
-            <p><a href="" title="">Roadrunner Pot Pie</a></p></span></li>
-        <li><span class="food-pics"><img src="images/recipes/soup.jpg" alt="Roadrunner Soup">
-            <p><a href="" title="">Roadrunner Soup</a></p></span></li>
-        <li><span class="food-pics"><img src="images/recipes/taco.jpg" alt="Roadrunner Tacos">
-            <p><a href="" title="">Roadrunner Tacos</a></p></span></li>
+        <li class="food-pics"><img src="images/recipes/bbqsand.jpg" alt="Pulled Roadrunner BBQ">
+            <p><a href="" title="">Pulled Roadrunner BBQ</a></p></li>
+        <li class="food-pics"><img src="images/recipes/potpie.jpg" alt="Roadrunner Pot Pie">
+            <p><a href="" title="">Roadrunner Pot Pie</a></p></li>
+        <li class="food-pics"><img src="images/recipes/soup.jpg" alt="Roadrunner Soup">
+            <p><a href="" title="">Roadrunner Soup</a></p></li>
+        <li class="food-pics"><img src="images/recipes/taco.jpg" alt="Roadrunner Tacos">
+            <p><a href="" title="">Roadrunner Tacos</a></p></li>
                 </ul>
-      </section>  
+      </section> 
+            </section>
     </main>
         
         <div id="product_container" class="hide">
@@ -69,8 +70,6 @@
                 <b>Reviews:</b><span id="reviews">Reviews shown here</span>/5 stars</p>
                 <p class="price">Price:  $<span id="price">15</span></p>
             </div>>
-            
-            <span id="price"></span>
         </div>
     <footer id="page-footer">
         <p>&copy; 2017 ACME Inc., All Rights Reserved</p>

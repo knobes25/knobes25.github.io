@@ -1,7 +1,7 @@
 //function for the acme JSON file
 function getJson() {
-const URL = "/acme/js/acme.json";
-    fetch(URL)
+const path = "/acme/js/acme.json";
+    fetch(path)
         .then(response => response.json())
         .then(function(data){
         console.log('json object');
@@ -12,15 +12,18 @@ const URL = "/acme/js/acme.json";
 }
 getJson();
 //Function for the nav bar
+let nav = document.getElementById("page_nav");
 function navBar(data){
-    console.log(data.items);
+    let navarray = ["Anvils", "Explosives", "Decoys", "Traps"];
+    let page_nav = document.getElementById("page_nav")
+    
     let list = "<ul>";
     for (let i=0, n = 5; i < n; i++) {
-        list += "<li>" + data.navarray[i] + "</li>";
+        list += "<li>" + data[navarray[i]] + "</li>";
     };
     list =+ "<ul>";
     
-    navList.innerHTML = list;
+    page_nav.innerHTML = list;
     
     let anvil= document.getElementById("Anvils");
     let explosives = document.getElementById("Explosives");
@@ -37,7 +40,7 @@ function navBar(data){
         displayData(data, navarray, 2)
     });
     traps.addEventListener("click", function(){
-        displayData(data, navarray, 0)
+        displayData(data, navarray, 3)
     });
 }
 
@@ -56,13 +59,19 @@ function displayData(data, name, n) {
     product_container.setAttribute("class", "show");
     home.setAttribute("class", "hide")
     
-    name.innerHTML = data[navarray[n]].name;
-    pic.innerHTML = "<img src = '" + data[navarray[n]].path + "' alt= 'image of current product' id="
+    name.innerHTML = data[name[n]].name;
+    pic.innerHTML = "<img src = '" + data[name[n]].path + "' alt= 'image of current product' id='productImage'/>"
+    description.innerHTML = data[name[n]].description;
+    maker.innerHTML = data[name[n]].manufacturer;
+    reviews.innerHTML = data[name[n]].reviews;
+    price.innerHTML = data[name[n]].price;
 }
-let nav = document.getElementById("page-nav");
-nav.addEventListener("click", function(event) {
-    event.preventDefault();
-    let product = event.target.dataset.name;
-    console.log(product);
-    displayData(product); 
-})
+
+
+//let nav = document.getElementById("page-nav");
+//nav.addEventListener("click", function(event) {
+//    event.preventDefault();
+//    let product = event.target.dataset.name;
+//    console.log(product);
+//    displayData(data, name, n); 
+//})

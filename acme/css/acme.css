@@ -32,8 +32,8 @@ body {
 }
 #white{
     background-color: #ffffff;
-    margin: 1em;
-    width: 1100px, center;
+    margin: 2vw 9vw;
+    width: 85%;
 }
 #img-text{
     background-image: url(/acme/images/site/feature.jpg);
@@ -52,7 +52,7 @@ body {
     font-size: 3vw;
 }
 #actionbtn{
-    height: 7vw;
+    width: 19vw;
 }
 #recipes{
     list-style: none;
@@ -67,7 +67,7 @@ body {
     font-size: 2vw;
 }
 /* 3.Nav Bar*/
-#page-nav {
+#page_nav {
     background-color: #de2226;
     margin: auto;
     border: 0px solid;
@@ -75,7 +75,7 @@ body {
     background-size: cover;
     
 }
-#page-nav ul {
+#page_nav ul {
     justify-content: space-around;
     display: flex;
     margin: 0;
@@ -102,7 +102,9 @@ nav a:hover{
     display: flex;
     align-items: flex-end;
     flex-flow: column;
-    padding: 3em;
+    padding: 2em;
+}
+
 }
 /* 5. Product Content*/
     .show{
