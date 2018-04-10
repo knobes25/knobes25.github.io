@@ -21,12 +21,11 @@ function navBar(data) {
        display += navname;
        console.log(display);
        document.getElementById(i).innerHTML = display;
-   }
-   
-       
+   }    
  
 }
 
+//event listener to "listen" for a click on one of the links in the nav bar
 let nav = document.getElementById("page_nav");
 nav.addEventListener("click", function(event) {
     let selection = event.target.innerHTML;
@@ -55,6 +54,7 @@ nav.addEventListener("click", function(event) {
     
 });
 
+//Function that displays the json data
 function displayData(data) {
      let home = document.getElementById("home-page");
     let name = document.getElementById("name");

@@ -66,6 +66,14 @@ body {
     display: block;
     font-size: 2vw;
 }
+.price{
+    font-size: 4vw;
+    color: #de2226;
+}
+#line{
+    border: thin solid;
+}
+
 /* 3.Nav Bar*/
 #page_nav {
     background-color: #de2226;
