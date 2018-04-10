@@ -73,7 +73,11 @@ body {
     border: 0px solid;
     border-radius: 0px;
     background-size: cover;
-    
+}
+#page_nav li {
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px;
+    padding-top: 7px;
 }
 #page_nav ul {
     justify-content: space-around;
@@ -85,10 +89,12 @@ body {
 }
 nav a:link{
     text-decoration:none;
+    color: #ffffff;
         
 }
 nav a:hover{
-   color: #000000;
+    background-color: #ffffff;
+    color: #de2226;
 }
 
 /* 4. Large Screens*/

@@ -3,79 +3,88 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>ACME | Home Page</title>
+    <title id="title">ACME | Home Page</title>
     <meta name="author" content="Kendall Noble">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="/acme/css/acme.css" media="screen">
 </head>
+
 <body id="background">
     <div id="white">
-    <header id="head">
-        <img src="/acme/images/site/logo.png" alt="site logo">
-    </header>
-    <nav id="page_nav">
-        <ul>
-            <li><a id="home" href="" target="_blank" title="Home"></a></li>
-            <li><a id="Anvils" title="Go to anvil page"></a></li>
-            <li><a id="Explosives" title="Go to Explosives page"></a></li>
-            <li><a id="Decoys" title="Go to Decoys page"></a></li>
-            <li><a id="Traps" title="Go to Traps page"></a></li>
-        </ul>
-    </nav>
-    <main>
-        <section id="home-page" class="show">
-<h1>Welcome to Acme!</h1>
-        <div id="img-text">
-          <ul>
-    <li><h2>Acme Rocket</h2></li>
-    <li>Quick lighting fuse</li>
-    <li>NHTSA approved seat belts</li>
-    <li>Mobile launch stand included</li>
-    <li><a href="#"><img id="actionbtn" alt="Add to cart button" src="/acme/images/site/iwantit.gif"></a></li>
-  </ul>
-        
-            </div>
+        <header id="head">
+            <img src="/acme/images/site/logo.png" alt="site logo">
+        </header>
+        <nav id="page_nav">
+            <ul>
+            <li><a href='/acme/index.html' id='0'></a></li>
+            <li><a href='/assignments/acme/anvils' id='1' onclick='event.preventDefault()'></a></li>
+            <li><a href='/assignments/acme/explosives' id='2' onclick='event.preventDefault()'></a> </li>
+            <li><a href='/assignments/acme/decoys' id='3' onclick='event.preventDefault()'></a></li>
+            <li><a href='/assignments/acme/traps' id='4' onclick='event.preventDefault()'></a></li>
+            </ul>
+            <noscript>Javascript must be enabled to use this site</noscript>
+        </nav>
+        <main>
+            <section id="home-page" class="show">
+                <h1>Welcome to Acme!</h1>
+                <div id="img-text">
+                    <ul>
+                        <li>
+                            <h2>Acme Rocket</h2>
+                        </li>
+                        <li>Quick lighting fuse</li>
+                        <li>NHTSA approved seat belts</li>
+                        <li>Mobile launch stand included</li>
+                        <li><a href="#"><img id="actionbtn" alt="Add to cart button" src="/acme/images/site/iwantit.gif"></a></li>
+                    </ul>
 
-        <section>
-            <h2>Acme Rocket Reviews</h2>
- <ul>
-    <li>"I don't know how I ever caught roadrunners before this." (9/10)</li>
-    <li>"That thing was fast!" (4/5)</li>
-    <li>"Talk about fast delivery." (5/5)</li>
-    <li>"I didn't even have to pull the meat apart." (4.5/5)</li>
-    <li>"I'm on my thirtieth one. I love these things!" (5/5)</li>
-  </ul>
-            <h2>Featured Recipes</h2>
-            <ul id="recipes">
-        <li class="food-pics"><img src="images/recipes/bbqsand.jpg" alt="Pulled Roadrunner BBQ">
-            <p><a href="" title="">Pulled Roadrunner BBQ</a></p></li>
-        <li class="food-pics"><img src="images/recipes/potpie.jpg" alt="Roadrunner Pot Pie">
-            <p><a href="" title="">Roadrunner Pot Pie</a></p></li>
-        <li class="food-pics"><img src="images/recipes/soup.jpg" alt="Roadrunner Soup">
-            <p><a href="" title="">Roadrunner Soup</a></p></li>
-        <li class="food-pics"><img src="images/recipes/taco.jpg" alt="Roadrunner Tacos">
-            <p><a href="" title="">Roadrunner Tacos</a></p></li>
-                </ul>
-      </section> 
+                </div>
+
+                <section>
+                    <h2>Acme Rocket Reviews</h2>
+                    <ul>
+                        <li>"I don't know how I ever caught roadrunners before this." (9/10)</li>
+                        <li>"That thing was fast!" (4/5)</li>
+                        <li>"Talk about fast delivery." (5/5)</li>
+                        <li>"I didn't even have to pull the meat apart." (4.5/5)</li>
+                        <li>"I'm on my thirtieth one. I love these things!" (5/5)</li>
+                    </ul>
+                    <h2>Featured Recipes</h2>
+                    <ul id="recipes">
+                        <li class="food-pics"><img src="images/recipes/bbqsand.jpg" alt="Pulled Roadrunner BBQ">
+                            <p><a href="" title="">Pulled Roadrunner BBQ</a></p>
+                        </li>
+                        <li class="food-pics"><img src="images/recipes/potpie.jpg" alt="Roadrunner Pot Pie">
+                            <p><a href="" title="">Roadrunner Pot Pie</a></p>
+                        </li>
+                        <li class="food-pics"><img src="images/recipes/soup.jpg" alt="Roadrunner Soup">
+                            <p><a href="" title="">Roadrunner Soup</a></p>
+                        </li>
+                        <li class="food-pics"><img src="images/recipes/taco.jpg" alt="Roadrunner Tacos">
+                            <p><a href="" title="">Roadrunner Tacos</a></p>
+                        </li>
+                    </ul>
+                </section>
             </section>
-    </main>
-        
+        </main>
+
         <div id="product_container" class="hide">
             <h1 id="name">Product Container</h1>
             <div id="product-pic">
                 <img id="productImage" src="images/products/anvil.png" alt="Product Image"></div>
             <div class="description">
-            <p id="description">Description here</p>
+                <p id="description">Description here</p>
                 <p><b>Made by:</b><span id="manufacturer">Manufacturer</span><br>
-                <b>Reviews:</b><span id="reviews">Reviews shown here</span>/5 stars</p>
-                <p class="price">Price:  $<span id="price">15</span></p>
+                    <b>Reviews:</b><span id="reviews">Reviews shown here</span>/5 stars</p>
+                <p class="price">Price: $<span id="price">15</span></p>
             </div>>
         </div>
-    <footer id="page-footer">
-        <p>&copy; 2017 ACME Inc., All Rights Reserved</p>
-        <p>All images used are believed to be in "fair use". Please notify the author if any are not and they will be removed.</p>
-    </footer>
+        <footer id="page-footer">
+            <p>&copy; 2017 ACME Inc., All Rights Reserved</p>
+            <p>All images used are believed to be in "fair use". Please notify the author if any are not and they will be removed.</p>
+        </footer>
         <script src="/acme/js/acme.js"></script>
     </div>
 </body>
+
 </html>
